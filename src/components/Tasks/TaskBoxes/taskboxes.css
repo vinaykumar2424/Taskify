@@ -1,0 +1,163 @@
+#all-tasks-boxes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1%;
+    height: 85dvh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+#all-tasks-boxes>.no-task-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+#all-tasks-boxes>.no-task-image>img{
+    width: 8rem;
+    height: auto;
+    object-fit: cover;
+}
+#all-tasks-boxes>.no-task-image>span{
+    font-size: 1rem;
+}
+#all-tasks-boxes::-webkit-scrollbar {
+    display: none;
+}
+
+#all-tasks-boxes>.task {
+    width: calc(32% - 2rem);
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 46%;
+    background: rgba(255, 255, 255);
+    position: relative;
+}
+
+#all-tasks-boxes>.task>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+#all-tasks-boxes>.task>div:first-child::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(220, 220, 220, 0.53);
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+}
+
+#all-tasks-boxes>.task>.title>span:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2px;
+}
+#all-tasks-boxes>.task>.title>span:first-child>span:first-child {
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: left;
+}
+#all-tasks-boxes>.task>.title>span:first-child>span:last-child {
+    font-weight: 300;
+    font-size: 0.6rem;
+}
+
+#all-tasks-boxes>.task>.title>span:last-child {
+    text-align: center;
+    padding: 2px 4px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+#all-tasks-boxes>.task>.desc {
+    text-align: left;
+    font-size: 0.8rem;
+    height: 70%;
+}
+
+#all-tasks-boxes>.task>.status {
+    text-align: center;
+    width: calc(100%);
+    padding: 0.5rem 0;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 6px;
+    margin-top: 1.2rem;
+}
+
+#all-tasks-boxes>.task>.assignee {
+    position: relative;
+}
+
+#all-tasks-boxes>.task>.assignee>span:nth-child(2) {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#all-tasks-boxes>.task>.assignee>span:nth-child(2):hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#all-tasks-boxes>.task>.assignee>.options-box {
+    position: absolute;
+    right: 0px;
+    top: 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 40%;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    z-index: 20;
+}
+
+#all-tasks-boxes>.task>.assignee>.options-box>button {
+    width: calc(100%);
+    padding: 0.5rem 0;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#all-tasks-boxes>.task>.assignee>.options-box>button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
